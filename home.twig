@@ -1,0 +1,13 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<header class="home-feature">
+	{{widget('feature', 'featurewidget', {"header": "Lorem Ipsum", "strapline":"Feature Strapline, probably needs to be longer", "buttonText":"Read more","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+	{{widget('twitter', 'twitterwidget', {'searchKey': 'basekit', 'searchType': 'username', 'count': '3','refreshTime': '1800000','includeRts': '0'})|raw}}
+</header>
+
+<section class="section main home-page">
+	{{zone('main')|raw}}
+</section>
+
+{% endblock %}

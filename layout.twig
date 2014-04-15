@@ -11,16 +11,15 @@
 	
 		{% include "header.twig" %}
 		
-		{{widget('feature', 'thisunqiuewidgetname', {"header": "Lorem Ipsum", "strapline":"Feature Strapline, probably needs to be longer", "buttonText":"Read more","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
 		
 		<div class="page-wrap container">
 			
 			{% block content %}
 			{% endblock %}
 
-			{% include "footer.twig" %}
-
 		</div>
+
+		{% include "footer.twig" %}
 		
 		<script type="text/javascript">
 			!function() {
