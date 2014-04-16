@@ -32,7 +32,7 @@
 	.span-1 {  width:@column; }
 	.span-2 {  width:@column * 2  + @gutter; }
 	.span-3 {  width:@column * 3  + @gutter * 2; }
-	.span-4 {  width:@column * 4  + @gutter * 3; }
+	.span-4, .ecom-productslist-product {  width:@column * 4  + @gutter * 3; }
 	.span-5 {  width:@column * 5  + @gutter * 4; }
 	.span-6 {  width:@column * 6  + @gutter * 5; }
 	.span-7 {  width:@column * 7  + @gutter * 6; }
@@ -59,7 +59,7 @@
 
 .grid( @column, @gutter );
 
-[class*="span-"] {
+[class*="span-"], .ecom-productslist-product {
 	margin-left: @gutter;
 	float: left;
 	max-width: 100%;
@@ -71,7 +71,7 @@
 	margin: 0 auto;
 }
 
-.row {
+.row, .ecom-productslist-products {
 	margin-left: -@gutter;
 	clear: both;
 	zoom: 1;

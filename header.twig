@@ -1,9 +1,12 @@
 <header class="template-header container">
 	<div class="row">
-		<div class="header-feature span-4">
-			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		<div class="header-title span-3">
+			{{widget('companyname', 'companyname', {"business": ""})|raw}}
 		</div>
-		<nav class="template-nav span-8">
+		<div class="header-logo span-1">
+			{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.svg')})|raw}}
+		</div>
+		<nav class="template-nav span-8" style="background: red;">
 			{{widget('extendednavigation', 'navigationheader', {})|raw}}
 		</nav>
 	</div>

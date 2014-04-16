@@ -3,8 +3,8 @@
 	"thumbnail":"thumbnail.png",
 	"screenshot":"thumbnail.png",
 	"pageTypes": [
-		"default",
 		"home",
+		"default",
 		"about",
 		"contact",
 		"gallery",
