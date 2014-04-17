@@ -462,3 +462,48 @@ button.btn,
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+
+@media @tablet {
+	.header-logo {
+		padding-top: 10px;
+	}
+	.widget .extendednavigation a.pull:after {
+		right: 7px;
+		background-color: @color-swatch2;
+		box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+	}
+	.template-nav:before {
+		display: none;
+	}
+	.widget .extendednavigation {
+		ul li {
+			padding: 0;
+		}
+		> ul > li {
+			border-right: 0;
+			&.folder:after {
+				right: 20px;
+				top: 47%;
+			}
+			&:hover ul {
+				top: 40px;
+				left: 0;
+				a {
+					padding: 14px 20px 15px;
+				}
+			}
+		}
+		ul {
+			padding: 0;
+		}
+	}
+	.widget.companyname {
+		text-align: center;
+		&:after {
+			display: none;
+		}
+	}
+	.section.main h3 {
+		margin: 0 8px;
+	}
+}
