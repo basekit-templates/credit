@@ -104,13 +104,17 @@ h2 {
 	}
 }
 
-h3, .widget.companyname a {
+h3 {
 	font-family:@font-swatch3-font-family; 
 	font-weight: @font-swatch3-font-weight; 
 	color:@font-swatch3-color; 
 	line-height:@font-swatch3-line-height; 
 	letter-spacing: @font-swatch3-letter-spacing; 
 	font-size: @font-swatch3-font-size;
+	
+	border-bottom: 1px solid fadeout(@color-swatch2, 75%);
+	padding-bottom: 1px;
+	margin-bottom: 10px;
 	a {
 		font-family:@font-swatch3-font-family; 
 		font-weight: @font-swatch3-font-weight; 
@@ -168,6 +172,24 @@ h6 {
 	}
 }
 
+.widget.companyname {
+	font-family:@font-swatch10-font-family;
+	font-weight: @font-swatch10-font-weight;
+	color:@font-swatch10-color;
+	line-height:@font-swatch10-line-height;
+	letter-spacing: @font-swatch10-letter-spacing;
+	font-size: @font-swatch10-font-size;
+	
+	background-color: @color-swatch4;
+	a {
+		font-family:@font-swatch10-font-family;
+		font-weight: @font-swatch10-font-weight;
+		line-height:@font-swatch10-line-height;
+		letter-spacing: @font-swatch10-letter-spacing;
+		font-size: @font-swatch10-font-size;
+	}	
+}
+
 p,
 .contactform label,
 .twitter ul li a,
@@ -196,9 +218,248 @@ a,
 .widget.twitter a,
 .widget.twitter ul li a,
 .widget.twitter ul li span a {
-	color: @color-swatch2;
+	color: @color-swatch3;
+	font-weight: 
 	text-decoration: none;
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+.widget.ecomproductslist .ecom-productslist-product:extend(.span-4, [class*="span-"]) {
+	margin-right: 0;
+}
+
+.ecom-productslist-products:extend(.row) { }
+
+.widget.ecomproductslist {
+	margin-left: 0;
+}
+
+.contactform button.btn,
+button.btn,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a,
+.widget.dropbox button,
+.clicktocall a,
+.signupform fieldset button,
+.blog-search-form button,
+.widget.socialicons span a,
+.widget.profile .bk-profile-socialicons span a,
+.widget.feature .feature-bgimg .content button,
+.template-footer .widget.profile .bk-profile-socialicons span a {
+	padding: 6px 14px 8px;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.widget.tweet a {
+	padding-left: 40px;
+	display: inline-block;
+}
+
+.widget.tweet, .widget.button {
+	display: inline-block;
+}
+
+// Wedge end
+.widget.companyname,
+.widget.feature h2 span,
+.widget.feature h3 span,
+.ecom-productlist-info h2 {
+	position: relative;
+	z-index: 1;
+	&:after {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		left: 100%;
+		margin-left: -16px;
+		top: 0;
+		height: 100%;
+		width: 20px;
+		background-color: inherit;
+		-webkit-transform: skewX(-8deg);
+		-moz-transform: skewX(-8deg);
+		-ms-transform: skewX(-8deg);
+		transform: skewX(-8deg);
+	}
+}
+
+// Wedge start
+.template-nav {
+	position: relative;
+	z-index: 1;
+	&:before {
+		z-index: -1;
+		content: "";
+		position: absolute;
+		right: 100%;
+		margin-right: -16px;
+		top: 0;
+		height: 100%;
+		width: 20px;
+		background-color: inherit;
+		-webkit-transform: skewX(-8deg);
+		-moz-transform: skewX(-8deg);
+		-ms-transform: skewX(-8deg);
+		transform: skewX(-8deg);
+	}
+}
+
+// Header
+.template-header {
+	padding-top: 30px;
+}
+
+.widget.companyname {
+	padding: 6px 12px 7px;
+}
+
+.widget.logo {
+	text-align: center;
+}
+
+.widget.feature {
+	h2, h3 {
+		color: @color-swatch6;
+		span {
+			background-color: darken(@color-swatch5, 20%);
+			padding: 4px 15px 8px;
+		}
+	}
+	h2 {
+		margin-bottom: 10px;
+	}
+	h3 {
+		border-bottom: none;
+		span {
+			padding-top: 5px;
+		}
+	}
+}
+
+.twitter-profile-pic {
+	width: 60px;
+	padding: 6px 0 0 0;
+}
+.widget.twitter {
+	p {
+		display: inline;
+	}
+	ul li a {
+		font-weight: 600;
+	}
+	ul li {
+		padding-bottom: 5px;
+	}
+}
+
+//  Navigation
+.template-nav {
+	background-color: @color-swatch2;
+}
+
+.widget .extendednavigation {
+	li > .text {
+		padding: 0;
+	}
+	ul li:hover ul {
+		background-color: @color-swatch4;
+		top: 55px;
+		left: -1px;
+		a {
+			padding: 8px 20px;
+		}
+		a:hover {
+			background-color: @color-swatch2;
+		}
+	}
+	> ul > li {
+		border-right: solid 1px @color-swatch4;
+		&:hover {
+			background-color: @color-swatch4;
+		}
+		a, &.folder {
+			padding: 14px 20px 15px;
+		}
+		&.folder {
+			padding-right: 30px;
+			margin-right: 0;
+			&:after {
+				right: 12px;
+				top: 46%;
+			}
+		}
+	}
+}
+
+// Home
+.section.main {
+	padding-top: 30px;
+	h3 {
+		border-bottom: none;
+	}
+}
+.widget.ecomproductslist .ecom-productslist-product {
+	padding: 0;
+}
+.ecom-productslist-product {
+	overflow: hidden;
+	position: relative;
+	.ecom-productlist-info {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		h2 {
+			line-height:bkscale(@font-swatch3-line-height, 0.9); 
+			font-size: bkscale(@font-swatch3-font-size, 0.9);
+			position: absolute;
+			top: 10px;
+			left: 0;
+			background-color: @color-swatch2;
+			padding: 7px 10px 8px;
+			a {
+				color: @color-swatch6;
+				line-height: inherit; 
+				font-size: inherit;
+			}
+		}
+		.ecom-productlist-price {
+			font-family: @font-swatch7-font-family;
+			position: absolute;
+			bottom: 10px;
+			left: 0;
+			background-color: @color-swatch4;
+			color: @color-swatch6;
+			padding: 7px 10px 8px;
+		}
+	}
+}
+
+// Page
+.page-wrap {
+	padding-top: 30px;
+}
+
+.widget.feature .feature-bgimg .content,
+.widget.feature .feature-bgimg {
+	height: 360px;
+}
+
+// Footer
+.widget.navigation {
+	li {
+		list-style: none;
+	}
+	ul {
+		padding-left: 0;
+	}
+}
+.template-footer {
+	padding-top: 30px;
+	padding-bottom: 30px;
 }

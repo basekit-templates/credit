@@ -7,10 +7,12 @@
 			{{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
 		</div>
 		<div class="span-4 product-categories">
-			{{widget('content', 'productcategoriestitle', {content: '<h3>Product Categories</h3>'})|raw}}
+			{{widget('content', 'productcategoriestitle', {content: '<h3>Location</h3>'})|raw}}
+			{{widget('map', 'mapfooter', {'height': '150', 'zoom': '15', 'address': 'profile'})|raw}}
 		</div>
 		<div class="span-4 pages">
 			{{widget('content', 'pagestitle', {content: '<h3>Pages</h3>'})|raw}}
+			{{widget('navigation', 'navigationfooter', {})|raw}}
 		</div>
 	</div>
 </footer>
