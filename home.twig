@@ -2,7 +2,7 @@
 {% block content %}
 <div class="row">
 	<header class="home-feature span-12">
-		{{widget('feature', 'featurewidget', {"header": "Lorem Ipsum", "strapline":"Feature Strapline, probably needs to be longer", "buttonText":"VIEW PRODUCT","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+		{{widget('feature', 'featurewidget', {"header": "Lorem Ipsum", "strapline":"Maecenas libero purus, pharetra ornare", "buttonText":"Maecenas","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
 	</header>
 {#
 	<aside class="home-aside span-4">
@@ -17,6 +17,7 @@
 <section class="section main home-page">
 	{{widget('content', 'maintitle', {content: '<h3>LATEST PRODUCTS</h3>'})|raw}}
 	{{widget('ecomproductslist', 'ecomproductslist', {})|raw}}
+	{{zone('main')|raw}}
 </section>
 
 {% endblock %}
