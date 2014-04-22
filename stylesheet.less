@@ -104,6 +104,10 @@ h2 {
 		line-height:@font-swatch2-line-height; 
 		letter-spacing: @font-swatch2-letter-spacing; 
 		font-size: @font-swatch2-font-size;
+		-webkit-transition: .2s;
+		-moz-transition: .2s;
+		-ms-transition: .2s;
+		transition: .2s;
 	}
 }
 
@@ -795,6 +799,12 @@ input[type="search"]::-webkit-search-decoration {
 
 .menu-subsection-promoted h3 {
 	margin: 0 13px;
+	&:before, &:after {
+		width: 23px;
+	}
+}
+
+.menu-subsection-promoted h2 {
 	&:before, &:after {
 		width: 23px;
 	}
