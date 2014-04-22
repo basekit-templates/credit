@@ -64,6 +64,9 @@
 
 // 1. Globals
 html, body {
+	background-color: @color-swatch1;
+	background-image: image('/images/background.gif');
+	background-repeat: repeat;
 	font-family:@font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
 	color:@font-swatch5-color;
@@ -274,6 +277,14 @@ button.btn,
 	}	
 }
 
+button:disabled,
+.widget.ecomcheckout .checkout-order-button:disabled {
+	background-color: darken(@color-swatch1, 10%);
+	&:hover {
+		background-color: darken(@color-swatch1, 10%);
+	}
+}
+
 .clicktocall a {
 	display: inline-block;
 }
@@ -290,6 +301,7 @@ form button {
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
 select,
 input,
 input[type=email],
@@ -310,10 +322,12 @@ textarea,
 	&:hover {
 		border: 1px solid darken(@color-swatch1, 20%);
 	}
+	&:focus {
+		border: 1px solid darken(@color-swatch1, 20%);
+	}
 }
 
 .widget.profile form fieldset input,
-input,
 input[type=email],
 input[type=text],
 .signupform fieldset input {
@@ -326,6 +340,7 @@ textarea {
 
 
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
 select {
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -340,12 +355,6 @@ select {
 .svg {
 	.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, select {
 		background-image: image('/images/arrow-down.svg');
-	}
-}
-
-.contactform input, .contactform textarea {
-	&:focus {
-		border: 1px solid darken(@color-swatch1, 20%);
 	}
 }
 
@@ -808,6 +817,52 @@ input[type="search"]::-webkit-search-decoration {
 
 .blog-post-item {
 	padding-bottom: 30px;
+}
+
+// Ecommerce
+.checkout-amount,
+.checkout-pricepu {
+	font-weight: @font-swatch4-font-weight;
+}
+
+.widget.ecomcheckout table tr td .checkout-quantitybtn button {
+	-webkit-font-smoothing: antialiased;
+}
+
+.widget.ecomcheckout table tr td .checkout-quantitybtn button {
+	font-family: inherit;
+}
+
+.template-nav .widget.ecombasket {
+	display: inline;
+	.ecombasket-pull {
+		display: inline;
+		width: auto;
+		padding: 0;
+		background-color: transparent;
+		p {
+			display: inline-block;
+			padding: 14px 20px 15px;
+			font-family: "Oswald", Arial, sans-serif;
+			&:hover {
+				background-color: @color-swatch4;
+			}
+		}
+	}
+	.ecombasket-list-container ul li {
+		border-bottom: 1px solid darken(@color-swatch1, 20%);
+	}
+}
+
+.ecombasket-list-container {
+	position: absolute;
+	top: 36px;
+	right: 0;
+	background: white;
+	padding: 10px;
+	border: 1px solid purple;
+	border-top: 0;
+	width: 260px;
 }
 
 @media @tablet {
