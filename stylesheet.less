@@ -837,16 +837,28 @@ input[type="search"]::-webkit-search-decoration {
 	display: inline;
 	.ecombasket-pull {
 		display: inline;
-		width: auto;
-		padding: 0;
 		background-color: transparent;
 		p {
+			background-color: @color-swatch2;
 			display: inline-block;
-			padding: 14px 20px 15px;
-			font-family: "Oswald", Arial, sans-serif;
 			&:hover {
 				background-color: @color-swatch4;
 			}
+		}
+	}
+}
+
+.widget.ecombasket {
+	.ecombasket-pull {
+		width: auto;
+		padding: 0;
+		p {
+			background-color: @font-swatch7-background-color;
+			padding: 14px 20px 15px;
+			font-family: "Oswald", Arial, sans-serif;
+			&:hover {
+				background-color: darken(@font-swatch7-background-color, 5%);
+			}	
 		}
 	}
 	.ecombasket-list-container ul li {
