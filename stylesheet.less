@@ -270,8 +270,6 @@ button.btn,
 	letter-spacing: @font-swatch7-letter-spacing;
 	font-size: @font-swatch7-font-size;
 	padding: 6px 14px 8px;
-	font-size: 16px;
-	line-height: 26px;
 	-webkit-transition: .2s;
 	-moz-transition: .2s;
 	-ms-transition: .2s;
@@ -310,6 +308,7 @@ select,
 input,
 input[type=email],
 input[type=text],
+input[type=search],
 textarea,
 .contactform input,
 .contactform textarea,
@@ -334,6 +333,7 @@ textarea,
 .widget.profile form fieldset input,
 input[type=email],
 input[type=text],
+input[type=search],
 .signupform fieldset input {
 	height: 40px;
 }
@@ -877,12 +877,13 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .ecombasket-list-container {
+	z-index: 1;
 	position: absolute;
 	top: 36px;
 	right: 0;
 	background: white;
 	padding: 10px;
-	border: 1px solid purple;
+	border: 1px solid @color-swatch2;
 	border-top: 0;
 	width: 260px;
 }
