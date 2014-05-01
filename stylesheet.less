@@ -918,6 +918,19 @@ input[type="search"]::-webkit-search-decoration {
 	width: 98.63%;
 }
 
+@media (max-width: 960px) {
+	.page-wrap, .template-header, .template-footer {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+// Mobile
+@media @mobile {
+	select {
+		width: 100%;
+	}
+}
 
 @media @tablet {
 	.header-logo {
@@ -961,9 +974,6 @@ input[type="search"]::-webkit-search-decoration {
 		&:after {
 			display: none;
 		}
-	}
-	.page-wrap {
-		padding: 20px;
 	}
 	.section.main h3 {
 		margin: 0 8px;
