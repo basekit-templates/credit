@@ -216,7 +216,7 @@ blockquote {
 	font-style: italic;
 	font-size: bkscale(@font-swatch5-font-size, 1.2);
 	line-height: bkscale(@font-swatch5-line-height, 1.2);
-	background-color: @color-swatch3;
+	background: desaturate(lighten(@color-swatch3, 60%), 65%);
 	&:before {
 		left: 8px;
 		color: @color-swatch2;
@@ -949,6 +949,10 @@ input[type="search"]::-webkit-search-decoration {
 	.widget .extendednavigation a.pull:after {
 		background-color: @color-swatch1;
 		box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
+	}
+	.ecombasket-list-container {
+		left: 0;
+		right: auto;
 	}
 	.template-nav:before {
 		display: none;
