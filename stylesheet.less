@@ -402,7 +402,7 @@ input[type="search"]::-webkit-search-decoration {
 .menu-subsection-promoted h3,
 .blog-post-metadata {
 	position: relative;
-	z-index: 1;
+	z-index: 0;
 	&:after {
 		position: absolute;
 		z-index: -1;
@@ -433,7 +433,7 @@ input[type="search"]::-webkit-search-decoration {
 .menu-subsection-promoted h3,
 .blog-post-metadata {
 	position: relative;
-	z-index: 1;
+	z-index: 0;
 	&:before {
 		z-index: -1;
 		content: "";
@@ -507,6 +507,7 @@ input[type="search"]::-webkit-search-decoration {
 //  Navigation
 .template-nav {
 	background-color: @color-swatch2;
+	z-index: 1;
 }
 
 .widget .extendednavigation {
@@ -758,6 +759,7 @@ input[type="search"]::-webkit-search-decoration {
 .blog-post-feature-image-wrap {
 	height: 200px;
 	background-size: cover;
+	background-position: center;
 	img {
 		display: none;
 	}
@@ -876,15 +878,18 @@ input[type="search"]::-webkit-search-decoration {
 			}	
 		}
 	}
-	.ecombasket-list-container ul li {
-		border-bottom: 1px solid darken(@color-swatch1, 20%);
+	.ecombasket-list-container {
+		top: 36px;
+		ul li {
+			border-bottom: 1px solid darken(@color-swatch1, 20%);
+		}
 	}
 }
 
 .ecombasket-list-container {
-	z-index: 1;
+	z-index: 2;
 	position: absolute;
-	top: 36px;
+	top: 100%;
 	right: 0;
 	background: white;
 	padding: 10px;
