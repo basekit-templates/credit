@@ -8,7 +8,9 @@
 		</div>
 		<nav class="template-nav span-7">
 			{{widget('extendednavigation', 'navigationheader', {})|raw}}
-			{{widget('ecombasket', 'ecombasket', {})|raw}}
+			{% if checkout is not defined %}
+				{{widget('ecombasket', 'ecombasket', {})|raw}}
+			{% endif %}
 		</nav>
 	</div>
 </header>
