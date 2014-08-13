@@ -567,6 +567,17 @@ div.widget.extendednavigation ul li {
 	}
 }
 
+// Selected state
+.extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
+    a, .text {
+        background-color: @color-swatch4;
+    }
+}
+.extendednavigation ul li.folder.selected ul li .text {
+    color: @font-swatch6-color;
+}
+
+
 // Home
 .section.main {
 	padding-top: 30px;
