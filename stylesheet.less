@@ -271,8 +271,7 @@ a.basket-summary-empty-cta.btn, .btn.basket-summary-submit {
 	}	
 }
 
-button:disabled,
-.widget.ecomcheckout .checkout-order-button:disabled {
+button:disabled {
 	background-color: darken(@color-swatch1, 10%);
 	&:hover {
 		background-color: darken(@color-swatch1, 10%);
@@ -280,11 +279,6 @@ button:disabled,
 }
 
 .clicktocall a {
-	display: inline-block;
-}
-
-.checkout-empty-link {
-	margin-top: 10px;
 	display: inline-block;
 }
 
@@ -300,7 +294,6 @@ form button {
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-.widget.ecomcheckout .delivery select,
 select,
 input,
 input[type=email],
@@ -363,7 +356,6 @@ textarea {
 
 
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-.widget.ecomcheckout .delivery select,
 select {
 	cursor: pointer;
 	-webkit-appearance: none;
@@ -1097,11 +1089,6 @@ div.widget.extendednavigation ul li {
 	.form-group {
 		margin-bottom: 0;
 	}
-}
-
-.checkout-legal-links {
-	list-style: none;
-	padding: 7px 0;
 }
 
 .widget.ecomproduct .ecom-product .btn {
