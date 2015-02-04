@@ -533,13 +533,17 @@ input[type="search"]::-webkit-search-decoration {
 	background-color: @color-swatch2;
 	z-index: 1;
 }
-div.widget .extendednavigation ul li,
-div.widget.extendednavigation ul li {
-	display: inline-block;
-	float: left;
+div.widget .extendednavigation ul,
+div.widget.extendednavigation ul {
+	font-size: 0;
+	li {
+		display: inline-block;
+		float: none;
+	}
 }
 
 .widget .extendednavigation {
+	.clearfix;
 	li > .text {
 		padding: 0;
 	}
@@ -582,7 +586,6 @@ div.widget.extendednavigation ul li {
 .extendednavigation ul li.folder.selected ul li .text {
     color: @font-swatch6-color;
 }
-
 
 // Home
 .section.main {
