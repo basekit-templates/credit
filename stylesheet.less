@@ -1075,7 +1075,7 @@ div.widget.extendednavigation ul {
 }
 
 .template-nav .widget.ecombasket {
-	display: inline;
+	display: inline-block;
 	.ecombasket-pull {
 		display: inline;
 		background-color: transparent;
@@ -1092,6 +1092,7 @@ div.widget.extendednavigation ul {
 .widget.ecombasket {
 	clear: both;
 	.ecombasket-pull {
+		-webkit-user-select: none;
 		width: auto;
 		padding: 0;
 		p {
@@ -1104,7 +1105,7 @@ div.widget.extendednavigation ul {
 		}
 	}
 	.ecombasket-list-container {
-		top: 36px;
+		top: 100%;
 		ul li {
 			border-bottom: 1px solid darken(@color-swatch1, 20%);
 		}
