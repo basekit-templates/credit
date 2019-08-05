@@ -1,5 +1,6 @@
 {
 	"name":"Credit",
+	"versionTenCompatible": 1,
 	"thumbnail":"thumbnail.png",
 	"screenshot":"credit-screenshot.jpg",
 	"templateType":"ecommerce",
